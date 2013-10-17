@@ -10,15 +10,55 @@
     will need to resolve manually.
 */
 
+Ext.ns('Ext.util'); // Fix for 2.1
+//<debug>
+Ext.Loader.setPath({
+    'Ext': 'touch/src'
+});
+//</debug>
+
+Ext.require([
+    'Ext.field.Text',
+    // Insert Ad
+    'Ext.MessageBox',
+    'Ext.data.JsonP',
+    'Ext.data.Errors',
+    'Ext.device.Camera'
+]);
+
+
 Ext.application({
     name: 'ShopAfter',
 
-    requires: [
-        'Ext.MessageBox'
+    profiles: [
+        'Phone',
+        'Tablet'
+    ],
+
+    models: [
+        'Ad'
+    ],
+
+    stores: [
+        'Ads',
+        'Search',
+        'Activity',
+        'InsertAdForms'
     ],
 
     views: [
-        'Main'
+        'LoggedOut',
+        'Main',
+        'Activity',
+        'ad.List',
+        'Dialog',
+        'ad.Picture'
+    ],
+
+    controllers: [
+        'Facebook',
+        'AdsViewings',
+        'YouTube'
     ],
 
     icon: {
@@ -39,12 +79,25 @@ Ext.application({
         '1496x2048': 'resources/startup/1496x2048.png'
     },
 
-    launch: function() {
-        // Destroy the #appLoadingIndicator element
-        Ext.fly('appLoadingIndicator').destroy();
+    viewport: {
+        autoMaximize: true // Causes the URL bar to be hidden once the application loads.
+    },
 
-        // Initialize the main view
-        Ext.Viewport.add(Ext.create('ShopAfter.view.Main'));
+    // This function will be run once the application is ready to be launched.
+    launch: function () {
+        console.log('application launch');
+        // Initialize Facebook with our app ID
+        ShopAfter.Facebook.initialize('723097297716821');
+        if (window.localStorage && window.localStorage.WL) {
+            var parsed = JSON.parse(window.localStorage.WL);
+            this.fireEvent('localStorageData', parsed);
+            console.log('app.launch parsed = %j', parsed);
+        }
+        // This is a convenience script which auto-reloads the CSS every second.
+        // Combined with `compass watch`, this is useful during theme development as the page doesn't need to be reloaded.
+        // setInterval(function(){
+        //     Ext.DomQuery.select('link')[0].href = "resources/css/movies.css?" + Math.ceil(Math.random() * 100000000)
+        // }, 1000);
     },
 
     onUpdated: function() {

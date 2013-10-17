@@ -640,7 +640,37 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
-  "ShopAfter.view.Main": []
+  "ShopAfter.Facebook": [],
+  "ShopAfter.controller.Ads": [],
+  "ShopAfter.controller.AdsViewings": [],
+  "ShopAfter.controller.Facebook": [],
+  "ShopAfter.controller.Viewings": [],
+  "ShopAfter.controller.YouTube": [],
+  "ShopAfter.controller.phone.Ads": [],
+  "ShopAfter.controller.tablet.Ads": [],
+  "ShopAfter.model.Ad": [],
+  "ShopAfter.model.InsertAdForm": [],
+  "ShopAfter.profile.Phone": [],
+  "ShopAfter.profile.Tablet": [],
+  "ShopAfter.store.Activity": [],
+  "ShopAfter.store.Ads": [],
+  "ShopAfter.store.InsertAdForms": [],
+  "ShopAfter.store.Search": [],
+  "ShopAfter.view.Activity": [],
+  "ShopAfter.view.Dialog": [],
+  "ShopAfter.view.LoggedOut": [],
+  "ShopAfter.view.Main": [],
+  "ShopAfter.view.ad.CapturePicture": [],
+  "ShopAfter.view.ad.InsertAdForm": [],
+  "ShopAfter.view.ad.List": [],
+  "ShopAfter.view.ad.Picture": [],
+  "ShopAfter.view.ad.SearchBar": [],
+  "ShopAfter.view.ad.SortBar": [],
+  "ShopAfter.view.phone.ad.Detail": [],
+  "ShopAfter.view.phone.ad.List": [],
+  "ShopAfter.view.tablet.Container": [],
+  "ShopAfter.view.tablet.ad.Detail": [],
+  "ShopAfter.view.tablet.ad.List": []
 });
 Ext.ClassManager.addNameAliasMappings({
   "Ext.AbstractComponent": [],
@@ -1359,7 +1389,54 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
+  "ShopAfter.Facebook": [],
+  "ShopAfter.controller.Ads": [],
+  "ShopAfter.controller.AdsViewings": [],
+  "ShopAfter.controller.Facebook": [],
+  "ShopAfter.controller.Viewings": [],
+  "ShopAfter.controller.YouTube": [],
+  "ShopAfter.controller.phone.Ads": [],
+  "ShopAfter.controller.tablet.Ads": [],
+  "ShopAfter.model.Ad": [],
+  "ShopAfter.model.InsertAdForm": [],
+  "ShopAfter.profile.Phone": [],
+  "ShopAfter.profile.Tablet": [],
+  "ShopAfter.store.Activity": [],
+  "ShopAfter.store.Ads": [],
+  "ShopAfter.store.InsertAdForms": [],
+  "ShopAfter.store.Search": [],
+  "ShopAfter.view.Activity": [
+    "widget.activity"
+  ],
+  "ShopAfter.view.Dialog": [],
+  "ShopAfter.view.LoggedOut": [
+    "widget.loggedOut"
+  ],
   "ShopAfter.view.Main": [
     "widget.main"
-  ]
+  ],
+  "ShopAfter.view.ad.CapturePicture": [
+    "widget.capturepicture"
+  ],
+  "ShopAfter.view.ad.InsertAdForm": [
+    "widget.insertadform"
+  ],
+  "ShopAfter.view.ad.List": [],
+  "ShopAfter.view.ad.Picture": [
+    "widget.contactpic",
+    "widget.devicepicture"
+  ],
+  "ShopAfter.view.ad.SearchBar": [
+    "widget.adSearchBar"
+  ],
+  "ShopAfter.view.ad.SortBar": [
+    "widget.adSortBar"
+  ],
+  "ShopAfter.view.phone.ad.Detail": [],
+  "ShopAfter.view.phone.ad.List": [],
+  "ShopAfter.view.tablet.Container": [
+    "widget.tabletContainer"
+  ],
+  "ShopAfter.view.tablet.ad.Detail": [],
+  "ShopAfter.view.tablet.ad.List": []
 });
