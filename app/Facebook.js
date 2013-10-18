@@ -7,7 +7,7 @@
  * - `connected`    Fired when the Facebook user is connected to the app
  * - `unauthorized` Fired when the Facebook user is not authorized for the app
  * - `logout`       Fired when the user logs out fo Facebook
- * - `exception`    Fired when there is a Facebook excpetion (such as a timeout)
+ * - `exception`    Fired when there is a Facebook exception (such as a timeout)
  */
 Ext.define('ShopAfter.Facebook', {
     mixins: ['Ext.mixin.Observable'],
@@ -44,7 +44,7 @@ Ext.define('ShopAfter.Facebook', {
     },
 
     /**
-     * This fucntion is run when the Facebook JS SDK has been successfully laoded onto the page.
+     * This function is run when the Facebook JS SDK has been successfully loaded onto the page.
      */
     onFacebookInit: function() {
         console.log('Facebook onFacebookInit');

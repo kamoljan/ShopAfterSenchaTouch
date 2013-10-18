@@ -88,8 +88,8 @@ Ext.application({
         console.log('application launch');
         // Initialize Facebook with our app ID
         ShopAfter.Facebook.initialize('723097297716821');
-        if (window.localStorage && window.localStorage.WL) {
-            var parsed = JSON.parse(window.localStorage.WL);
+        if (window.localStorage && window.localStorage.ShopAfter) {
+            var parsed = JSON.parse(window.localStorage.ShopAfter);
             this.fireEvent('localStorageData', parsed);
             console.log('app.launch parsed = %j', parsed);
         }

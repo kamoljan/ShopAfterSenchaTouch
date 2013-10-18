@@ -80,10 +80,10 @@ Ext.define('ShopAfter.controller.Ads', {
                 ads: tmp.ads,
                 profileId: FB.getUserID()
             });
-            if (window.localStorage && window.localStorage.WL && window.localStorage.WL == cache) {
+            if (window.localStorage && window.localStorage.ShopAfter && window.localStorage.ShopAfter == cache) {
                 return false;
             }
-            window.localStorage.WL = cache;
+            window.localStorage.ShopAfter = cache;
             if (!this.firstLoad) {
                 this.onFirstLoad(FB.getUserID());
                 this.firstLoad = true;
